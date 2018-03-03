@@ -38,10 +38,7 @@ def cleaned_text(text):
     # set(text) = {';', '@', '(', '/', "'", '1', ' ', '!', '?', 'é', '3', '"', '9', 'g', '&', 'w', 'c', 'j', 'l', 'v', 'e', 'a', 'z', '4', 'h', 'à', 'b', '8', 'è', '0', ',', '2', 'i', 'd', 'y', 'k', 'r', 'm', 'o', '5', '.', '%', 's', '$', ')', 'â', 'f', 'n', '*', 'u', '7', 'p', 'x', '-', 'q', ':', '6', 't'}
     
     text = text.lower()
-    text = re.sub(r'[àâ]', 'a', text)
-    text = re.sub(r'[èé]', 'e', text)
-    text = re.sub(r'[&]', ' and ', text)
-    text = re.sub(r'[^a-zA-Z\d!,.:;?]', ' ', text)
+    text = re.sub(r'[^a-z!,.:;?]', ' ', text)
     return text
 
 ### TODO: fill out the function below that transforms the input text and window-size into a set of input/output pairs for use with our RNN model
