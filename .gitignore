@@ -16,3 +16,8 @@ __pycache__/
 .venv
 venv/
 ENV/
+
+.idea
+rnn-*.zip
+rnn-result*.json
+RNN_project.html
